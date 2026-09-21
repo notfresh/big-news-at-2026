@@ -303,4 +303,47 @@ OpenChamber 在文末方法学部分自己写了一段非常冷静的话，我�
 
 ---
 
+## 参考 URL 可达性（curl HEAD 自动检测，2026-09-21）
+
+**总 26 · ✅ 200 = 21 · ❌ 异常 = 5**
+
+| 状态 | 来源 | URL |
+|------|------|-----|
+| ✅ `200` | typesafe.ai 官方 | <https://typesafe.ai/blog/introducing-system-one-models-and-jev> |
+| ✅ `200` | Diogo 推文 | <https://x.com/CompleteSkeptic/status/2099925682726002904> |
+| ❌ `403` | BusinessWire 通稿 | <https://www.businesswire.com/news/home/20260915525333/en/TypeSafe-AI-Emerges-From-Stealth-With-$40M-in-Funding-With-New-Model-for-Composable-AI> |
+| ✅ `200` | DCVC 官方 | <https://www.dcvc.com/news-insights/typesafe-emerges-from-stealth-with-a-new-way-of-doing-ai/> |
+| ❌ `405` | Hacker News | <https://news.ycombinator.com/item?id=49717558> |
+| ✅ `200` | LangChain 博客 | <https://www.langchain.com/blog/building-a-harness-with-jev> |
+| ✅ `200` | Forbes | <https://www.forbes.com/sites/josipamajic/2026/09/19/jev-cuts-ai-decision-costs-100x-and-vercel-cloudflare-rushed-to-add-it/> |
+| ✅ `200` | The Rundown | <https://www.therundown.ai/news/typesafe-jev-ai-decisions-software> |
+| ✅ `200` | TestingCatalog | <https://www.testingcatalog.com/icymtypesafe-ai-launches-jev-for-structured-ai-decisions/> |
+| ✅ `200` | RuntimeWire | <https://runtimewire.com/article/langchain-adds-jev-decision-model-agent-workflows> |
+| ✅ `200` | MarkTechPost | <https://www.marktechpost.com/2026/09/19/typesafe-ai-releases-jev/> |
+| ✅ `200` | ExplainX | <https://www.explainx.ai/blog/how-to-integrate-jev-agent-routing-2026> |
+| ✅ `200` | OpenChamber | <https://openchamber.dev/blog/jev-typesafe-ai/> |
+| ✅ `200` | Tony Bai | <https://tonybai.com/2026/09/20/jev-typesafe-system-one-model-intro/> |
+| ✅ `200` | 博客园 sing1ee | <https://www.cnblogs.com/sing1ee/p/23040079> |
+| ❌ `403` | 网易订阅 | <https://www.163.com/dy/article/L79CV09Q0514R9P4.html> |
+| ❌ `403` | 搜狐 | <https://www.sohu.com/a/1078557346_122066679> |
+| ✅ `200` | 掘金 | <https://juejin.cn/post/7687209773674872858> |
+| ✅ `200` | EggStriker | <https://www.eggstriker.com/blog/jev-typesafe-system-one-2026> |
+| ✅ `200` | AI Hub Plus | <https://blog.aihubplus.com/post/jev-typesafe-system-one-model-review/> |
+| ❌ `403` | 知乎讨论 | <https://www.zhihu.com/question/2083549123160925836> |
+| ✅ `200` | OEGlobal | <https://connect.oeglobal.org/t/jev-typesafe/9408> |
+| ✅ `200` | OmniJev awesome | <https://github.com/OmniJev/awesome-jev-gallery> |
+| ✅ `200` | Laya GitHub | <https://github.com/receptron/laya> |
+| ✅ `200` | Laya 官方页 | <https://laya.convaiinnovations.com/> |
+| ✅ `200` | El Solitario | <https://elsolitario.org/en/2026/09/19/laya-convai-decision-engine-33ms/> |
+
+### ❌ 异常清单（curl HEAD 测得，浏览器大多仍能打开）
+
+- **BusinessWire 通稿** `403` → 反爬（anti-bot）
+- **Hacker News** `405` → HEAD 方法不被允许（HN 仅允许 GET，浏览器正常）
+- **网易订阅** `403` → 反爬（anti-bot）
+- **搜狐** `403` → 反爬（anti-bot）
+- **知乎讨论** `403` → 反爬（anti-bot）
+
+---
+
 **声明**：本次调研为独立归档。文中所有传播学描述基于公开网页可观察的事实，不挂钩任何用户此前写过的传播学内容。
