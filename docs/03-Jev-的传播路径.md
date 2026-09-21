@@ -58,6 +58,40 @@
   - **OpenChamber**（openchamber.dev）发布《Jev by TypeSafe AI: 193× in the headlines, 7× in user reports》——**这是迄今为止对 Jev 第一波传播最有数据支撑的事后分析**。9/15-9/18 共采集 26,896 条相关推特，留存 12,759 条；启动 thread 累计 29.8M views；Context pruning 议题 9/17-18 拿 2.1M views（其中 @tamarajtran 的 fast-jev-compaction 单帖 1.45M views，被 Diogo 转发）。来源：<https://openchamber.dev/blog/jev-typesafe-ai/>（一手，方法学在文末）
   - **OmniJev/awesome-jev-gallery** GitHub 仓库汇总：截至 9/21 共 119 条目，分布在 8 个 section（Open Source / Built with Jev / Independent Evaluations / 等），是开源复现生态的最完整索引。来源：<https://github.com/OmniJev/awesome-jev-gallery>（一手）
 
+### 2026-09-20~21：第二轮扩散——独立开发者真实案例 + waitlist 取消 + 欧洲触达
+
+写完上一版后，继续盯了 24 小时，**新增 4 类事实**，原本的「8 个 section / 119 条目」已经不准确。
+
+- **2026-09-20：waitlist 取消 + 模型版本升级**
+  - **TypeSafe Console**（`console.typesafe.ai`）9/20 起**对所有人开放、无需 waitlist**（LLM Reference 9/20 刷新条目，原话："generally available to everyone with no waitlist as of 2026-09-20 via <https://console.typesafe.ai/>"）。这是上一版报告里「507 条 waitlist 抱怨」「363 条'没有访问权限'」叙事**被产品端反转**的关键节点——**仅 5 天就取消 waitlist**，原本作为"稀缺感制造器"的机制主动放弃
+  - **当前模型版本**：`jev-1.13.0`，SDK 默认别名 `jev-latest`、`jev-preview`；**上下文窗口从 32K 提升到 66K**（32K state + 32K question + 边距，LLM Reference 标 "66k context"，GenAIWiki / docs.typesafe.ai/models 一致）；**Choice 类型最大选项数 255**（GenAIWiki 引用 docs）——这些数字上一版没有
+  - **Vercel AI Gateway 公开采用数据**（StartupFortune 9/20 8:18 AM）：**Jev 是 Vercel AI Gateway 史上最快采用模型；24 小时内被 13% 的付费团队使用，超过此前所有模型（含 GPT-5.6 系列）"more than twice the share reached by any previous model launch"**。这是上一版「Vercel 当日集成」预测之外的硬数据
+- **2026-09-20~21：独立开发者真实成本/速度数字开始覆盖**（The AI Corner 9/20）
+  - **浏览器代理找机票**：7 秒，$0.0039
+  - **Claude session compaction**：从近 1M tokens → 86K，1 秒完成
+  - **1018 篇学术论文分类**：8 美分
+  - **Tamara Tran 的 compaction 插件**：上一版已经提到，但 The AI Corner 给出了具体语境——这是 compaction 场景的标杆用例
+- **2026-09-21：欧洲 + 维基类参考源首次覆盖**
+  - **heise online**（德国最大 IT 媒体，9/17 4:21 PM CEST）——欧洲科技媒体首条覆盖。Tomislav Bezmalinović 撰稿，把 Jev 定位为"AI 模型首次明确以机器而非人为对话对象"。来源：<https://www.heise.de/en/news/AI-model-Jev-to-make-machines-decide-faster-11457071.html>（一手 URL）
+  - **UA.NEWS**（乌克兰，9/18 21:58 转载 TechCrunch）——东欧媒体第一篇，第一次出现具体工程师姓名 + 内部型号名："Vercel engineer **Pranit Sharma** replaced its ChatGPT **Luna 5.6**-based classifier with Jev to check command security — results were obtained **5 to 18 times faster** and with higher accuracy"。来源：<https://ua.news/en/technologies/typesafe-predstaviv-model-jev-dlia-avtomatizatsiyi-pz-techcrunch>（一手 URL，二手原文来自 TechCrunch）
+  - **AI Wiki**（aiwiki.ai/wiki/jev）：词条化处理——为搜索引擎用户提供"事实库"。把发布日、创始人、三位共同创始人 Erik Gafni / Sasha Sheng、训练目标 RLCD、arXiv 引用全列在一页
+  - **LLM Reference**（llmreference.com/model/jev）：面向"采购对比"的参考站，给出 1 个 provider route + 版本 + 上下文 + 商业模式（"Commercial use: conditional"）
+  - **GenAIWiki**（genaiwiki.com/models/jev）：技术细节站，第一条点出"API model field 是 `jev-latest`，POST `https://api.typesafe.ai/v1/systemone`"——技术性参考事实库
+  - **Nerdy.dev**（nerdy.dev/jev）：9/17 短文 6,006 浏览。"next-gen programming model" 叙事，最早一批把 Jev 和"编程范式迁移"绑定的英文独立博客
+  - **Forkast**（forkast.news，9/17 8:55 PM UTC）——金融科技视角，第一次明确"$40M @ $200M 估值"，"agentic economy" 语境下的归类
+- **2026-09-21：长文方法论覆盖**
+  - **Gene Dai**（digidai.github.io）9/21《TypeSafe's Jev, From Model Launch to Jevable's Early Projects》——25 分钟长文，6 天后视角。重点事实：**Jevable 目录已收录 194 个项目**（games / browser tools / research utilities / robots）——是上一版「awesome-jev-gallery 119 条目」之外的**第二个独立生态目录**，且条目数显著超过 awesome-jev-gallery。Gene Dai 的核心论点是：TypeSafe 卖的不是聊天框，而是**「塞进别人产品里的依赖」**——终用户可能永远不知道模型名叫 Jev。来源：<https://digidai.github.io/2026/09/21/typesafe-jev-jevable-decision-models/>（一手，方法学型）
+- **2026-09-21：中文圈方法论长文也出现**
+  - **ExplainX**（explainx.ai）9/16 发布 + **9/21 Update 补丁**："TypeSafe reportedly launched a **Jev Playground** claiming '440x cheaper than LLMs' — a higher figure than this post's original 400x claim, with no disclosed methodology change — plus **JevBench**, a new decision-model benchmark"。**JevBench** 是上一版完全没提到的新事物。来源：<https://www.explainx.ai/blog/typesafe-ai-jev-system-one-models-launch-2026>（一手 + 9/21 更新）
+
+---
+
+**本节小结**：第二轮（9/20~21）有三个上一版完全没料到的特征变化：
+
+1. **waitlist 在 5 天内被取消**——原本作为"传播稀缺感"的机制主动放弃
+2. **"被广泛采用"的可验证数字开始出现**——Vercel AI Gateway 13% 付费团队、194 个 Jevable 项目——上一版报告是基于「流量」侧写的，现在可以基于「使用」侧写
+3. **欧洲 + 维基类参考源开始覆盖**——意味着 Jev 已经进入"被产品索引 / 被地理覆盖"的阶段，**传播从「话题」转入「基础设施」**
+
 ---
 
 ## 二、传播路径：哪些平台首发、哪些二传、讨论最热
@@ -248,6 +282,85 @@ OpenChamber 在文末方法学部分自己写了一段非常冷静的话，我�
 
 ---
 
+## 七、24 小时补丁（2026-09-21 20:00 CST）：第二轮扩散对原机制的修正
+
+上一版定稿 7 小时后的**新观察**——这部分专门处理上一版机制分析需要被哪些新事实修正。
+
+### 1. waitlist 5 天取消：稀缺感机制主动放弃
+
+**原判断**：waitlist 既是稀缺感制造器也是传播摩擦（507 条抱怨 + 363 条"我没有访问权限"——上一版第七节第 5 条问题）。
+
+**新事实**：9/20 起 `console.typesafe.ai` 对所有人开放，无需 waitlist（LLM Reference 9/20 刷新记录）。**整个 waitlist 周期只有 5 天**——Diogo 的"造浪"窗口比上一版假设的短一个数量级。
+
+**机制修正**：上一版我假设的「waitlist 会因为太常见而失效」是一个**较长时间尺度**的判断（数月到数年级别）。但 TypeSafe 实际选择的策略是**「用 waitlist 创造开局稀缺感 → 5 天内用 console 开放承接流量」**——这是一个更精妙的「**先饥后饱**」组合：
+
+- 第一阶段（9/15-19）：waitlist 制造稀缺感，吸引 Tier 1 开发者 + 媒体
+- 第二阶段（9/20+）：直接开放，把流量转化为产品试用
+
+**这意味着 TypeSafe 在用「5 天的稀缺感窗口」买传播效率，然后用「无限供应」买使用规模**。这种节奏选择比「永远 waitlist」或「永远开放」都更聪明——它把稀缺感这个一次性的资产用到了刀刃上，而不是稀释到无穷。
+
+### 2. 「被广泛采用」从流量侧写转为使用侧写
+
+**原判断**：原报告第五节「OpenChamber 数据」是基于「推文流量」和「启动 thread 累积 views」做传播分析，**这一步是「流量侧写」**。
+
+**新事实**（9/20-21）：
+- **Vercel AI Gateway**：Jev 24 小时内被 **13% 付费团队**使用——超过 GPT-5.6 首发同期
+- **Jevable 目录**：**194 个项目**（Gene Dai 9/21）——比 awesome-jev-gallery 的 119 条目多 63%，且来源独立
+- **独立开发者真实成本**：浏览器代理找机票 7 秒 $0.0039、Claude compaction 1M→86K 用 1 秒、1018 篇论文分类 8 美分（The AI Corner 9/20）
+
+**机制修正**：原报告里那个「**真实使用人群规模比 Twitter 流量小一个数量级**」的判断仍然成立，但**这个差距正在快速缩小**。13% Vercel 付费团队 + 194 个项目 + P95 真实开发者案例，构成了**「使用侧写」**——这是**第二版报告里完全没有的侧写维度**。
+
+**判断**：当一个产品的"使用侧写"开始追上"流量侧写"时，它就开始从「话题产品」过渡到「基础设施」——**这是 2026 年 AI 模型从「被讨论」到「被依赖」的拐点信号**。
+
+### 3. 欧洲 + 维基类参考源首次覆盖：从"被讨论"到"被引用"
+
+**原判断**：上一版报告的覆盖维度是「美国英语圈 + 中文圈」——地理单一。
+
+**新事实**（9/17-21）：
+- **heise online**（德国，9/17）——欧洲最大 IT 媒体第一篇
+- **UA.NEWS**（乌克兰，9/18）——东欧第一篇，且给出**硬证据**：Vercel 工程师 Pranit Sharma 把内部 ChatGPT Luna 5.6 分类器替换为 Jev，5-18× 加速、更高准确率
+- **AI Wiki / LLM Reference / GenAIWiki**——三个**面向"采购对比"和"技术参考"的索引站**给 Jev 开了独立条目
+
+**机制修正**：原报告里讨论的传播学结构是「**话题 → 翻译 → 大众媒体**」——这三步。但 9/17-21 出现的覆盖实际上是「**话题 → 技术参考索引 → 采购决策支持**」——这是完全不同的一组受众：
+
+- heise 读者：欧洲开发者、企业技术决策者
+- AI Wiki / LLM Reference 读者：**正在评估是否要用 Jev 替换现有方案**的技术买家
+- UA.NEWS 读者：东欧开发者社区
+
+**这意味着 Jev 的传播受众**已经**从「想了解这个新模型」**的人群，扩散到「**正在评估要不要把它放进生产系统**」的人群——后者的决策影响比前者大得多，但传播路径不同（他们不看 Tony Bai 公众号，他们看 heise 和 LLM Reference）。
+
+### 4. 营销数字在新版里悄悄升级：400× → 440×，但没有方法学变更
+
+**原判断**：原报告第五节已经指出「营销数字和实测值相差约一个数量级」。
+
+**新事实**：ExplainX 9/21 Update："TypeSafe reportedly launched a Jev Playground claiming **'440x cheaper than LLMs'** — a higher figure than this post's original **400x claim, with no disclosed methodology change**"。
+
+**机制修正**：这是「**数字弹药在 5 天内自动升级**」的活案例——同一个产品、同一个评测集，只是营销文案改了。原报告关于「数字弹药不需要准确，只需要足够吸引点击」的判断得到了**直接验证**——不只是「不需要准确」，而是「**可以主动调高**」。
+
+### 5. JevBench 的出现意味着什么
+
+**新事实**：9/21 ExplainX Update 同时提到 **JevBench**——TypeSafe 新发布的「decision-model benchmark」。
+
+**机制修正**：原报告里 Laya 的「原创性质疑」是被开源社区摆到台面的。TypeSafe 的回应不是直接对抗，而是**自建一个评测标准**——这是上一版报告里没料到的回应方式：
+
+- **不参与 arXiv 学术标准战**——那是 Laya 的主场
+- **建一个自己的 benchmark**——这是营销战，不是学术战
+- **JevBench 的目标受众不是研究者，是采购者**——让"我们有自己的评测标准"成为采购侧的新话术
+
+**判断**：当一个被批评的产品**主动建一个评测标准**而不是**参与已有标准**的时候，**它默认了自己的客户不是研究者**——**而是企业技术决策者**。这是 TypeSafe 的客户画像主动收敛的一个证据。
+
+### 6. 给上一版"留给自己的问题"的 24 小时答案
+
+| 上一版问题 | 24 小时后能给的答案 |
+|---|---|
+| 冷启动的"创始人 IP + 当日生态集成"是只有 Diogo 这种背景的人才凑齐的吗？ | **24 小时数据不能完全回答**——但 5 天取消 waitlist + 13% Vercel 付费团队表明：凑齐三件套**不是冷启动的全部**，还要在 5 天内**用产品开放承接流量** |
+| "零幻觉"到底零的是哪种幻觉？中文媒体追问没？ | **仍然没有中文媒体追问**——但英文圈 OpenChamber 和 Forkast 已经把"schema safety"和"factual accuracy"分开讲 |
+| Laya 的"原创性质疑"在中文圈展开没？ | **没有**——但 TypeSafe 已经用 JevBench 回应了，**主动把战场从"学术"拉到"评测"** |
+| 中文圈的"理性批评"密度是否成立？ | **24 小时数据不足以回答**——但 Tony Bai 后续文章引入了 HN 反对意见，已经开始出现 |
+| waitlist 会不会因为太常见而失效？ | **不适用了**——TypeSafe 5 天取消 waitlist，证明这个机制在它的传播策略里是「开局用一次就够」 |
+
+---
+
 ## 我看到的几个东西
 
 **第一，"创始人 IP + 当日生态集成"是 2026 年 AI 模型冷启动的标准答案**。这次 Jev 的传播链上，Diogo 的 X thread 实际流量 + LangChain 48 小时内的解读博客 + Vercel/Cloudflare 同步上架——这三个动作在同一个 72 小时窗口内完成，缺一不可。**冷启动模型如果缺了这三件套里任何一件，传播效率会下降一个数量级**
@@ -301,6 +414,26 @@ OpenChamber 在文末方法学部分自己写了一段非常冷静的话，我�
 - Laya 官方发布页：<https://laya.convaiinnovations.com/>
 - El Solitario（Laya 深读）：<https://elsolitario.org/en/2026/09/19/laya-convai-decision-engine-33ms/>
 
+### 第二轮新增参考 URL（2026-09-21 20:00 CST 追加）
+
+- Gene Dai 长文（Jevable + 194 项目）：<https://digidai.github.io/2026/09/21/typesafe-jev-jevable-decision-models/>
+- StartupFortune（Vercel 13% 付费团队）：<https://startupfortune.com/typesafe-ais-decision-model-jev-becomes-vercels-fastest-adopted-launch/>
+- The AI Corner（独立开发者真实案例）：<https://www.the-ai-corner.com/p/jev-typesafe-system-one-model-decision-layer-playbook-2026>
+- heise online（德国首篇）：<https://www.heise.de/en/news/AI-model-Jev-to-make-machines-decide-faster-11457071.html>
+- UA.NEWS（乌克兰首篇 + 工程师硬证据）：<https://ua.news/en/technologies/typesafe-predstaviv-model-jev-dlia-avtomatizatsiyi-pz-techcrunch>
+- AI Wiki（词条）：<https://aiwiki.ai/wiki/jev>
+- LLM Reference（采购对比站）：<https://www.llmreference.com/model/jev>
+- GenAIWiki（技术参考）：<https://genaiwiki.com/models/jev>
+- Nerdy.dev（独立开发者短文）：<https://nerdy.dev/jev>
+- Forkast（金融科技视角，$200M 估值）：<https://forkast.news/typesafe-ais-jev-is-not-an-llm-and-that-may-be-the-point/>
+- ExplainX 9/21 Update（JevBench + 440×）：<https://www.explainx.ai/blog/typesafe-ai-jev-system-one-models-launch-2026>
+- Mezha（乌克兰另一英文版）：<https://mezha.net/eng/news/d559e594_typesafe_ai_unveils/>
+- Eastern Herald（4 小时前报道）：<https://easternherald.com/2026/09/21/typesafe-ai-jev-decision-model-developers/>
+- How2Shout（英文 SEO 站）：<https://www.how2shout.com/news/typesafe-jev-ai-decision-model.html>
+- Let's Data Science（产品榜单站）：<https://letsdatascience.com/news/typesafe-ai-launches-jev-decision-model-889a38c0>
+- Enera Labs（企业自动化视角）：<https://www.eneralabs.com/blog/typesafe-jev-system-one-model-enterprise-automation-2026/>
+- Orca Router（中转站视角）：<https://www.orcarouter.ai/blog/jev-typesafe-system-one-what-we-know>
+
 ---
 
 ## 参考 URL 可达性（curl HEAD 自动检测，2026-09-21）
@@ -343,6 +476,39 @@ OpenChamber 在文末方法学部分自己写了一段非常冷静的话，我�
 - **网易订阅** `403` → 反爬（anti-bot）
 - **搜狐** `403` → 反爬（anti-bot）
 - **知乎讨论** `403` → 反爬（anti-bot）
+
+---
+
+## 第二轮参考 URL 健康度（curl HEAD 自动检测，2026-09-21 20:00 CST）
+
+**总 17 · ✅ 200 = 13 · ↪️ 3xx = 0 · ❌ 异常 = 4**
+
+| 状态 | 来源 | URL |
+|------|------|-----|
+| ✅ `200` | Gene Dai 长文 | <https://digidai.github.io/2026/09/21/typesafe-jev-jevable-decision-models/> |
+| ✅ `200` | StartupFortune | <https://startupfortune.com/typesafe-ais-decision-model-jev-becomes-vercels-fastest-adopted-launch/> |
+| ✅ `200` | The AI Corner | <https://www.the-ai-corner.com/p/jev-typesafe-system-one-model-decision-layer-playbook-2026> |
+| ✅ `200` | heise online | <https://www.heise.de/en/news/AI-model-Jev-to-make-machines-decide-faster-11457071.html> |
+| ✅ `200` | UA.NEWS | <https://ua.news/en/technologies/typesafe-predstaviv-model-jev-dlia-avtomatizatsiyi-pz-techcrunch> |
+| ❌ `429` | AI Wiki | <https://aiwiki.ai/wiki/jev> |
+| ✅ `200` | LLM Reference | <https://www.llmreference.com/model/jev> |
+| ✅ `200` | GenAIWiki | <https://genaiwiki.com/models/jev> |
+| ✅ `200` | Nerdy.dev | <https://nerdy.dev/jev> |
+| ✅ `200` | Forkast | <https://forkast.news/typesafe-ais-jev-is-not-an-llm-and-that-may-be-the-point/> |
+| ✅ `200` | ExplainX 9/21 | <https://www.explainx.ai/blog/typesafe-ai-jev-system-one-models-launch-2026> |
+| ❌ `403` | Mezha | <https://mezha.net/eng/news/d559e594_typesafe_ai_unveils/> |
+| ❌ `403` | Eastern Herald | <https://easternherald.com/2026/09/21/typesafe-ai-jev-decision-model-developers/> |
+| ❌ `403` | How2Shout | <https://www.how2shout.com/news/typesafe-jev-ai-decision-model.html> |
+| ✅ `200` | Let's Data Science | <https://letsdatascience.com/news/typesafe-ai-launches-jev-decision-model-889a38c0> |
+| ✅ `200` | Enera Labs | <https://www.eneralabs.com/blog/typesafe-jev-system-one-model-enterprise-automation-2026/> |
+| ✅ `200` | Orca Router | <https://www.orcarouter.ai/blog/jev-typesafe-system-one-what-we-know> |
+
+### ❌ 异常清单（curl HEAD 测得，浏览器大多仍能打开）
+
+- **AI Wiki** `429` → 限流（rate-limit，非死链，浏览器过会儿能打开）
+- **Mezha** `403` → 反爬（anti-bot）
+- **Eastern Herald** `403` → 反爬（anti-bot）
+- **How2Shout** `403` → 反爬（anti-bot）
 
 ---
 
