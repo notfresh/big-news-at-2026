@@ -42,21 +42,21 @@
 - **2026-09-19**：开源版 **Laya** 由 Convai Innovations（Nandakishor Mukkunnoth 创办）发布在 `receptron/laya`（GitHub）和 Hugging Face `convaiinnovations/laya`——这是传播链上**第一次起跳的二次起跳**。Receptron 组织 = Convai Innovations 的开源账号。`@receptron/laya` v0.1.1 同期发布
 - **2026-09-19**：**Flavio Copes** 的独立解读传到中文圈（Tony Bai 文末列了它作为参考）
 - **2026-09-20**：
-  - **Tony Bai** 公众号发文《刚刚，TypeSafe 发布"反 LLM"新物种 JEV：0.1 秒出结果、宣称零幻觉、比大模型便宜上百倍》——**中文圈最关键的中长文 KOL 节点**。文章按"是什么 → 命名 → 架构 → 三种原语 → 性能 → Agent 位置 → 生态 → 边界"标准结构铺开。13 分钟阅读量。tonybai.com/2026/09/20/jev-typesafe-system-one-model-intro/（一手 URL）
-  - **博客园 sing1ee**《2026年完整指南：什么是 Jev？TypeSafe「系统一模型」如何让 AI 决策...》——典型中文长文 SEO 模板，开头"核心要点"罗列 193.6×、444.6×、$0.042、$0.000081、0.114 秒等所有会进标题党的数字。来源：cnblogs.com/sing1ee/p/23040079（一手 URL）
-  - **网易订阅**（澎湃新闻转载）《前 OpenAI 研究员推出首款 "System One" 模型引爆 AI 圈：不生成文本，专为机器做快速决策》——中文大众媒体的第一次规模触达。2026-09-20 14:38。来源：163.com/dy/article/L79CV09Q0514R9P4.html（一手 URL）
-  - **搜狐**《System One 模型 Jev 引爆 2026 AI 圈！不写诗不编代码，专给机器做"秒级决策"》——典型搜狐 SEO 标题党风格，把"决策密度指数级爆炸"叙事拉到头条。来源：sohu.com/a/1078557346_122066679（一手 URL）
-  - **掘金** juejin.cn/post/7687209773674872858《Jev：把前沿智能变成一次"函数调用"——TypeSafe AI 与它的 System One》（一手 URL）
-  - **EggStriker AI**（独立 AI 中转站测评博客）：《「JEV」是什么：TypeSafe AI 的首个 System One 模型 Jev》——给中文"模型路由/中转"用户量身定做，明确点出"非 OpenAI 兼容的接口，中转站里没有任何一家列出 Jev"——这是**中文圈最稀缺的中转站视角**。来源：eggstriker.com/blog/jev-typesafe-system-one-2026（一手 URL）
+  - **Tony Bai** 公众号发文《刚刚，TypeSafe 发布"反 LLM"新物种 JEV：0.1 秒出结果、宣称零幻觉、比大模型便宜上百倍》——**中文圈最关键的中长文 KOL 节点**。文章按"是什么 → 命名 → 架构 → 三种原语 → 性能 → Agent 位置 → 生态 → 边界"标准结构铺开。13 分钟阅读量。<https://tonybai.com/2026/09/20/jev-typesafe-system-one-model-intro/>（一手 URL）
+  - **博客园 sing1ee**《2026年完整指南：什么是 Jev？TypeSafe「系统一模型」如何让 AI 决策...》——典型中文长文 SEO 模板，开头"核心要点"罗列 193.6×、444.6×、$0.042、$0.000081、0.114 秒等所有会进标题党的数字。来源：<https://www.cnblogs.com/sing1ee/p/23040079>（一手 URL）
+  - **网易订阅**（澎湃新闻转载）《前 OpenAI 研究员推出首款 "System One" 模型引爆 AI 圈：不生成文本，专为机器做快速决策》——中文大众媒体的第一次规模触达。2026-09-20 14:38。来源：<https://www.163.com/dy/article/L79CV09Q0514R9P4.html>（一手 URL）
+  - **搜狐**《System One 模型 Jev 引爆 2026 AI 圈！不写诗不编代码，专给机器做"秒级决策"》——典型搜狐 SEO 标题党风格，把"决策密度指数级爆炸"叙事拉到头条。来源：<https://www.sohu.com/a/1078557346_122066679>（一手 URL）
+  - **掘金** <https://juejin.cn/post/7687209773674872858>《Jev：把前沿智能变成一次"函数调用"——TypeSafe AI 与它的 System One》（一手 URL）
+  - **EggStriker AI**（独立 AI 中转站测评博客）：《「JEV」是什么：TypeSafe AI 的首个 System One 模型 Jev》——给中文"模型路由/中转"用户量身定做，明确点出"非 OpenAI 兼容的接口，中转站里没有任何一家列出 Jev"——这是**中文圈最稀缺的中转站视角**。来源：<https://www.eggstriker.com/blog/jev-typesafe-system-one-2026>（一手 URL）
 
 ### 2026-09-19~21：Laya 引发的二次起跳与争议
 
-- **2026-09-19**：El Solitario 英文深度文《Laya: AI Decision Engine at 32.8ms, Up to 8 Times Faster Than Jev》——把"Convai 早在 2025 年 3 月 arXiv:2503.23303 就提了这个想法，TypeSafe 闭源 + 商业化重做了一遍"的故事摆到台面。来源：elsolitario.org/en/2026/09/19/laya-convai-decision-engine-33ms/（一手）
-- **2026-09-20**：Tony Bai 后续文章《Jev 刚发布就封神？一位独立研究员在 HN 开怼：这套「非自回归决策模型」，我一年前就做出来了》——把 HN 上 @NathanFlurry 的"smart switch statement"批评带进中文圈（tonybai.com 索引页可见）
+- **2026-09-19**：El Solitario 英文深度文《Laya: AI Decision Engine at 32.8ms, Up to 8 Times Faster Than Jev》——把"Convai 早在 2025 年 3 月 arXiv:2503.23303 就提了这个想法，TypeSafe 闭源 + 商业化重做了一遍"的故事摆到台面。来源：<https://elsolitario.org/en/2026/09/19/laya-convai-decision-engine-33ms/>（一手）
+- **2026-09-20**：Tony Bai 后续文章《Jev 刚发布就封神？一位独立研究员在 HN 开怼：这套「非自回归决策模型」，我一年前就做出来了》——把 HN 上 @NathanFlurry 的"smart switch statement"批评带进中文圈（<tonybai.com> 索引页可见）
 - **2026-09-20~21**：
   - **OEGlobal Connect** 教育社区的 Mauricio 在同一天（9/20）做了"用 Jev 给巴西高考作文自动评分"的项目 demo，GitHub 公开。这是英文圈"toehold 场景"（教育评估）第一次出现——证明产品在一周内就开始跨领域扩散
-  - **OpenChamber**（openchamber.dev）发布《Jev by TypeSafe AI: 193× in the headlines, 7× in user reports》——**这是迄今为止对 Jev 第一波传播最有数据支撑的事后分析**。9/15-9/18 共采集 26,896 条相关推特，留存 12,759 条；启动 thread 累计 29.8M views；Context pruning 议题 9/17-18 拿 2.1M views（其中 @tamarajtran 的 fast-jev-compaction 单帖 1.45M views，被 Diogo 转发）。来源：openchamber.dev/blog/jev-typesafe-ai/（一手，方法学在文末）
-  - **OmniJev/awesome-jev-gallery** GitHub 仓库汇总：截至 9/21 共 119 条目，分布在 8 个 section（Open Source / Built with Jev / Independent Evaluations / 等），是开源复现生态的最完整索引。来源：github.com/OmniJev/awesome-jev-gallery（一手）
+  - **OpenChamber**（openchamber.dev）发布《Jev by TypeSafe AI: 193× in the headlines, 7× in user reports》——**这是迄今为止对 Jev 第一波传播最有数据支撑的事后分析**。9/15-9/18 共采集 26,896 条相关推特，留存 12,759 条；启动 thread 累计 29.8M views；Context pruning 议题 9/17-18 拿 2.1M views（其中 @tamarajtran 的 fast-jev-compaction 单帖 1.45M views，被 Diogo 转发）。来源：<https://openchamber.dev/blog/jev-typesafe-ai/>（一手，方法学在文末）
+  - **OmniJev/awesome-jev-gallery** GitHub 仓库汇总：截至 9/21 共 119 条目，分布在 8 个 section（Open Source / Built with Jev / Independent Evaluations / 等），是开源复现生态的最完整索引。来源：<https://github.com/OmniJev/awesome-jev-gallery>（一手）
 
 ---
 
