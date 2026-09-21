@@ -11,4 +11,4 @@
 | 2026-09-19 | 开篇词 | [docs/00-开篇词.md](docs/00-开篇词.md) |
 | 2026-09-20 | Jev：放弃说话的系统一直觉模型 | [docs/01-Jev：放弃说话的系统一直觉模型.md](docs/01-Jev：放弃说话的系统一直觉模型.md) |
 | 2026-09-21 | Jev 的推理框架到底在干什么（采样范式串行vs并行 / 输出空间 schema 钉死 / RLCD 训练目标 / ModernBERT+决策头架构 / 杰文斯悖论押注 / 和 LLM 是新原语不是替代） | [docs/02-Jev-的推理框架到底在干什么.md](docs/02-Jev-的推理框架到底在干什么.md) |
-| 2026-09-21 | Jev 的传播路径（9/15 官方三件套 → 9/16~17 英文圈二传 → 9/18 OpenRouter + Laya 开源二次起跳 → 9/19~20 中文圈集中爆发；机制分析覆盖创始人 IP / System One 命名 / 数字弹药 / LangChain 当日集成 / Diogo 主动造浪） | [docs/03-Jev-的传播路径.md](docs/03-Jev-的传播路径.md) |
+| 2026-09-21 | Jev 的传播路径（9/15 官方三件套 → 9/16~17 英文圈二传 → 9/18 OpenRouter + Laya 开源二次起跳 → 9/19~20 中文圈集中爆发；机制分析覆盖创始人 IP / System One 命名 / 数字弹药 / LangChain 当日集成 / Diogo 主动造浪；**9/21 20:00 追加 24h 补丁：waitlist 5 天取消 / Vercel 13% 付费团队 / Jevable 194 项目 / heise+UA.NEWS 欧洲触达 / JevBench 营销战回应 Laya / 400×→440× 数字自动升级**） | [docs/03-Jev-的传播路径.md](docs/03-Jev-的传播路径.md) |
